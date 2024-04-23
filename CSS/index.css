@@ -1,0 +1,43 @@
+
+
+#name {
+    background-color: rgb(160, 86, 86);
+    font-family: "lobster", sans-serif ;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+}
+h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(160, 86, 86);
+    font-weight: bolder;
+    font-size: 2rem;
+}
+body{
+    height: 100vh;
+    background-color: rgb(246, 238, 229);
+    color: rgb(142, 99, 99);
+    font-family: 'Times New Roman', Times, serif;
+}
+#Profile_picture{
+    border-radius: 70%;
+    margin: 1em;
+    width: 40%;
+    border-color:rgb(160, 86, 86);
+    border-width: 2dvi;
+    border-style: double;
+}
+#experience ul li {
+    list-style: circle;
+    padding: 0.5em;
+    font-size: larger;
+    color: rgb(167, 126, 126);
+    border-color: brown;
+    border-radius: 0.8em;
+    border-style: solid;
+    background-color: azure;
+}
+#conect a {
+    background-color: azure;
+    margin: 10px;
+    
+}
