@@ -30,20 +30,7 @@ body{
     border-radius: 70%;
     margin: 1em;
     width: 20%;
-    border-color:rgb(160, 86, 86);
-    border-width: 2dvi;
-    border-style: double;
-}
-#experience ul li {
-    list-style: circle;
-    padding: 0.5em;
-    font-size: larger;
-    color: rgb(167, 126, 126);
-    border-color: brown;
-    border-radius: 0.8em;
-    border-style: solid;
-    background-color: azure;
-}
+
 #connect {
     text-align: center;  
 }
@@ -64,5 +51,5 @@ body{
     display: flex;
     justify-content: center; 
     height: 100%;
-    /*margin-bottom: 0;*/
+
 }
