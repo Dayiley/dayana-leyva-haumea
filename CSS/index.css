@@ -1,10 +1,26 @@
 
 
 header{
-    text-align: right;
+    text-align:right;
     position: sticky;
     top: 0;
     z-index: 1000;
+    background-color: azure;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+nav a{
+    text-decoration: none;
+    color:brown;
+    
+}
+nav a:focus{
+    color:#1792d2;
+}
+
+main, #about, #experience, #skills, #projects, #connect{
+scroll-margin-top: 100px;
 }
 
 #name {
@@ -30,6 +46,34 @@ body{
     border-radius: 70%;
     margin: 1em;
     width: 20%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));/*mobile first*/
+    gap: 10px;
+}
+.grid-items {
+    display: flex;
+    flex-direction: row;
+    background-color: azure;
+    border-radius: 0,9em;
+    padding: 0,8em;
+    border-radius: 10%;
+}
+.one-experience{
+    display: flex;
+    flex-direction: column;
+}
+.date{
+    font-weight: bold;
+    margin-right: 1em;
+    min-width: fit-content;
+}
+.exp-description{
+    text-align: justify;
+    margin-right: 40px;
+}
 
 #connect {
     text-align: center;  
@@ -51,5 +95,30 @@ body{
     display: flex;
     justify-content: center; 
     height: 100%;
-
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    .grid-container{
+        grid-template-columns: 1fr 1fr;
+    }
+    h2{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: blue;
+    }
+    .grid-items{
+    background-color:#b2e50b;
+    color:black;
+    }
+}
+@media only screen and (min-width:1025px){
+    .grid-container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    h2{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: rgb(45, 228, 36);
+    }
+    .grid-items{
+    background-color:#ed7bc3;
+    color:aliceblue
+    }
 }
