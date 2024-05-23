@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/index.js" defer></script>
     <title>My First Webpage</title>
     <title>Dayana -haumea -My First Webpage</title>
     <link rel="stylesheet"href="css/index.css" />
@@ -79,6 +80,24 @@
     <section id= "projects">
         <h2>Projects</h2>      
     </section>  
+    
+    <section id="messageSec">
+        <h2 >Leave a message</h2>
+        <form name="leave_message">
+            <label for="usersName">Name</label>
+            <input type="text" name="usersName" id="usersName" required>
+            <label for ="usersEmail">Email</label>
+            <input type="email" name="usersEmail"id="usersEmail" required>
+            <label for="usersMessage">Message</label>
+            <textarea name="usersMessage" id="usersMessage" ></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <section id="messages">
+        <h2>Messages</h2>
+        <ul></ul>
+    </section>
 
     <div class="container">
     <section id= "connect">    
@@ -109,6 +128,5 @@
 </div><!--container-->
 
     </section>
-    <script src="js/index.js"></script> 
     </body>
 </html>
