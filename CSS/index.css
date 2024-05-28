@@ -1,89 +1,190 @@
-* {
+
+
+
+
+/* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
   }
   section {
-    max-width: 80rem;
+   
     padding: 1rem 2rem;
-    margin: auto;
+    margin: 0;
   }
+  section:not(:last-child) {
+    margin-bottom: 0; 
+*/
 
 header{
     text-align:right;
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: azure;
-    margin-bottom: 30px;
+    background-color:  rgb(83, 4, 109);
+    margin-bottom: 0px;
     padding-bottom: 10px;
 }
-
-nav a{
+#header-container {
+   text-align: right;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Setting a max width ensures things don't get too stretched out on larger screens */
+    max-width: 80rem;
+    margin: auto;
+  }
+  #nav-links {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.3rem;
+  }
+  #menu-icon {
+    display: none;
+    width: 48px;
+    /* You can change the color of an image using filters */
+    filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(30deg) brightness(119%) contrast(119%);
+    align-items: right;
+  }
+  ul {
+    list-style-type: none;
+  }
+    nav a{
     text-decoration: none;
-    color:brown;
-    
+    color:rgb(255, 255, 255);
+
+       
+}
+nav a:hover{
+    color: rgb(226, 180, 115);
+
 }
 nav a:focus{
     color:#1792d2;
 }
 
-main, #about, #experience, #skills, #projects, #connect{
-scroll-margin-top: 100px;
+#about-me {
+    background-color:rgb(83, 4, 109);
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    h2{
+        color:rgb(109, 109, 109);
+        text-align: center;
+    }
+    p{
+        color:rgb(191, 190, 191);
+        text-align: center;
+    }
+}
+.about-me-container {
+    flex-wrap:wrap;
+    display: flex; 
+    align-items:stretch; 
+}
+.outer {
+    width: 100%; 
 }
 
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-left, .bottom-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.right-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -4.7px;
+}
+
+
+.about-content {
+    flex-direction: column; /* Utiliza flexbox para los elementos internos */
+    align-items: center; /* Centra los elementos verticalmente */
+    justify-content: flex-start; /* Coloca los elementos al inicio del contenedor */
+}
+
+
+.profile-picture-container  {
+    width: 100%; 
+    height: auto; 
+    max-width: none; /* Desactivamos la restricción del ancho máximo */
+    max-height: none; /* Desactivamos la restricción de la altura máxima */
+    /*display: inline-block;*/
+    margin-left: 3rem;
+    margin-right: 2rem;
+    margin-bottom: 0;
+}
 #name {
-    background-color: rgb(160, 86, 86);
-    font-family: "lobster", sans-serif ;
-    font-size: 3rem;
-    color: rgb(255, 255, 255);
+    font-family:"Monoton", sans-serif;
+    font-weight: 305;
+    font-size: 2rem;
+    color: rgb(251, 250, 251);
+    text-shadow: 3px 3px 3px black;
+
 }
 h2{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(160, 86, 86);
+    color: rgb(122, 41, 149);
     font-weight: bolder;
     font-size: 2rem;
+    align-items: center;
+    text-align: center;
 }
 body{
-    height: 100vh;
-    background-color: rgb(246, 238, 229);
-    color: rgb(142, 99, 99);
-    font-family: 'Times New Roman', Times, serif;
     margin: 0;
-}
-#Profile_picture{
-    border-radius: 70%;
-    margin: 1em;
-    width: 20%;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));/*mobile first*/
-    gap: 10px;
+    gap: 1px;
+    margin-left: 2rem;
 }
 .grid-items {
     display: flex;
     flex-direction: row;
-    background-color: azure;
-    border-radius: 0,9em;
-    padding: 0,8em;
-    border-radius: 10%;
+   
 }
 .one-experience{
     display: flex;
     flex-direction: column;
+    color:rgb(122, 41, 149) ;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.exp-heading{
+    margin-bottom: 0;
 }
 .date{
     font-weight: bold;
-    margin-right: 1em;
-    min-width: fit-content;
+    margin: 0;
+    font-size: smaller;
+    color:rgb(109, 109, 109);
 }
 .exp-description{
     text-align: justify;
     margin-right: 40px;
+    color:black;
 }
-
+/*.container{
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    margin:auto;
+    box-sizing: border-box;
+}
 #connect {
     text-align: center;  
 }
@@ -98,13 +199,8 @@ body{
 }
 .icon-images img{
     max-width: 100%;
-} 
+}*/
 
-.container{
-    display: flex;
-    justify-content: center; 
-    height: 100%;
-}
 #messageSec {
   margin: auto;
   max-width: 28rem;
@@ -131,7 +227,7 @@ body{
   #messageSec input,
   textarea {
     padding: 0.5rem;
-    border: 1px solid rgb(212, 160, 83);
+    border: 1px solid rgb(122, 41, 149);
     border-radius: 0.5rem;
     font-family: "Courier New", Courier, monospace;
   }
@@ -140,7 +236,7 @@ body{
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 0.5rem;
-    background-color: rgb(212, 160, 83);
+    background-color: rgb(122, 41, 149);
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -149,29 +245,69 @@ body{
   #messageSec button:hover {
     background-color: rgb(226, 180, 115);
   }
+  
+  footer {
+    background-color: rgb(83, 4, 109);
+    padding: 20px;
+    text-align: center;
+}
+#connect h2 {
+    color:rgb(109, 109, 109);
+}
+.container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos dentro del contenedor */
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+    flex-direction: column; /* Coloca los elementos en columna */
+    margin-bottom: -40px;
+    margin-top: -20px;
+}
+
+.connect-icons {
+    display: flex;
+    flex-direction: row; /* Los iconos se colocarán en una fila */
+    align-items: center; /* Alinea los iconos verticalmente al centro */
+    justify-content: center; /* Centra los iconos horizontalmente */
+}
+
+.connect-icons a {
+    margin: 5px; /* Espacio entre los iconos */
+}
+
+@media (max-width: 700px) {
+  #nav-links {
+    display: none;
+  }
+
+  #menu-icon {
+    display: inline;
+  }
+
+  #menu-icon svg {
+    color: rgb(212, 160, 83);
+    fill: green;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 1024px){
     .grid-container{
         grid-template-columns: 1fr 1fr;
     }
-    h2{
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        color: blue;
-    }
+  
     .grid-items{
-    background-color:#b2e50b;
-    color:black;
+    
     }
+
+
 }
 @media only screen and (min-width:1025px){
     .grid-container{
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
     h2{
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        color: rgb(45, 228, 36);
+        
     }
     .grid-items{
-    background-color:#ed7bc3;
-    color:aliceblue
+ 
     }
 }
