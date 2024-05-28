@@ -4,67 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="js/index.js" defer></script>
-    <title>My First Webpage</title>
-    <title>Dayana -haumea -My First Webpage</title>
+    <title>Dayana-haumea -My First Webpage</title>
     <link rel="stylesheet"href="css/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link 
-        href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" 
+        href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" 
         rel="stylesheet"
         />
   </head>
   <body>
+    
+    <div>
     <header>
-    <nav>
+        <nav>
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#connect">Connect</a>
-         </nav>
-     </header>
+        </nav>
+    </header>
+    
+    <section id="about-me">
+        <div class="outer">
+            <div class="about-me-container">
+                <div class="left-section">
+                    <div class="top-left">
+                        <h1 id="name">Dayana Leyva</h1>
+                    </div>
+                    <div class="bottom-left">
+                        <section id="about">
+                            <h2>About</h2>
+                            <p>Industrial engineering,passionate about numbers, crafting and dogs,
+                            now starting a path in software development </p>
+                        </section>
+                    </div>
+                </div>
+                <div class="right-section">
+                    <div class="profile-picture-container">
+                        <img src="img/dayi.png" alt="Dayana profile picture" width="250" id="Profile_picture">
+                    </div>
+                </div>
+            </div>
+        </div><!--outer-->
+    </section>
 
-     <h1 id="name"> Dayana Leyva  </h1>
-
-     <section id= "about">
-             <h2>About</h2>
-               <p>Industrial engeeniring, software developer student  </p>
-    </section>  
-
-    <img src="img/dayi.png"
-        alt="Dayana profile picture"
-        width="250"
-        id="Profile_picture">
     <section id="experience">
         <h2>Experience</h2>
         <div class="grid-container">
           <div class="grid-items">
-            <h3 class="date">2018-2020</h3>
             <div class="one-experience">
                 <h3 class="exp-heading">Commercial Specialist</h3>
+                <h4 class="date">2018-2020</h4>
                 <p class="exp-description">
-                Analyze market trends, identify growth oportunities, devise strategic initiaves to enhance revenue
-                and profitability. Negotiate contracts, cultivating partnerships and conducting market research to
-                drive business development. Achieve results through effective decision-making and collaboration width
-                stakeholders
+                    Analyze market trends, identify growth oportunities, devise strategic initiaves to enhance revenue
+                    and profitability. Negotiate contracts, cultivating partnerships and conducting market research to
+                    drive business development. Achieve results through effective decision-making and collaboration width
+                    stakeholders
                 </p>
             </div>
         </div>
         <div class="grid-items" >
-            <h3 class="date">2020-2022</h3>
             <div class="one-experience">
                 <h3 class="exp-heading">Health and Safety Manager</h3>
+                <h4 class="date">2020-2022</h4>
                 <p class="exp-description">
                     Implement and mantein safety protocols to ensure compliance with regulations and mnimize workplace hazards.
                     Conduct risk assessments developing training programs and promote a culture of safety within organization. 
                 </p>
             </div>
         </div>       
+        <div class="grid-items" >
+            <div class="one-experience">
+                <h3 class="exp-heading">Assistant Manager</h3>
+                <h4 class="date">2022-2023</h4>
+                <p class="exp-description">
+                    Cultivate strong, trust-based relationships with key clients by regularly engaging with them,
+                    understanding their business objectives, and proactively addressing their needs.
+                    Develop account strategies and action plans in collaboration with the sales team to achieve
+                    sales targets and objectives.
+                    Stay informed about industry trends, market conditions, and competitor activities to provide 
+                    insights and recommendations to clients and internal stakeholders.
+                </p>
+            </div>
+        </div>       
         <div class="grid-items">
-            <h3 class="date">2024</h3>
             <div class="one-experience">
                 <h3 class="exp-heading">Code the dream Student</h3>
+                <h4 class="date">2024</h4>
                 <p class="exp-description">
                     Intro to programming course 
                 </p>
@@ -77,9 +105,10 @@
         <h2>Skills</h2>      
     </section>  
 
-    <section id= "projects">
-        <h2>Projects</h2>      
-    </section>  
+    <section id="projects">
+        <h2>My Projects</h2>
+        <ul></ul>
+    </section>
     
     <section id="messageSec">
         <h2 >Leave a message</h2>
@@ -99,34 +128,39 @@
         <ul></ul>
     </section>
 
-    <div class="container">
-    <section id= "connect">    
-        <h2>Connect</h2>
-        <div class="connect-icons"></div>
-        <a href="https://github.com/Dayiley">
-             <img class="icon-images" src="img/icons/Github.png"
-                width="50"
-                id="github_icon">
-         </a>
-         <a href="https://www.linkedin.com/in/dayana-leyva-00826b206/">
-             <img class="icon-images" src="img/icons/LinkedIn.png"
-                width="50"
-                id="linkedin_icon">
-         </a>     
-         <a href="https://www.facebook.com/dayana.leyva.982?mibextid=LQQJ4d">
-            <img class="icon-images" src="img/icons/Facebook.png"
-                width="50"
-                id="facebook_icon">
-        </a>
 
-        <a href="mailto:dayileyvas@gmail.com">
-            <img class="icon-images" src="img/icons/email.png"
-               width="50"
-               id="email_icon">
-        </a>
-    </div><!--connect-icons-->
-</div><!--container-->
 
-    </section>
-    </body>
+<footer>
+    <section id="connect">
+        <div class="container">  
+            <h2>Connect</h2>
+            
+            <div class="connect-icons">
+                <a href="https://github.com/Dayiley">
+                    <img class="icon-images" src="img/icons/Github.png" 
+                    width="50" id="github_icon">
+                </a>
+
+                <a href="https://www.linkedin.com/in/dayana-leyva-00826b206/">
+                    <img class="icon-images" src="img/icons/LinkedIn.png"
+                     width="50" id="linkedin_icon">
+                </a>     
+               
+                <a href="https://www.facebook.com/dayana.leyva.982?mibextid=LQQJ4d">
+                    <img class="icon-images" src="img/icons/Facebook.png" 
+                    width="50" id="facebook_icon">
+                </a>
+
+                <a href="mailto:dayileyvas@gmail.com">
+                    <img class="icon-images" src="img/icons/email.png" 
+                    width="50" id="email_icon">
+                </a>
+
+            </div><!-- .connect-icons -->
+        </div><!-- .container -->
+    </section><!-- #connect -->
+
+    <div id="dynamic-content"></div> <!-- Contenedor para el contenido dinámico -->
+</footer>
+</body>
 </html>
