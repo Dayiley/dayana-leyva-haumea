@@ -1,3 +1,5 @@
+
+/*Create footer year and copyright*/
 const today = new Date();
 const thisYear = today.getFullYear();
 
@@ -8,7 +10,7 @@ copyright.innerHTML = `<small>Dayana Leyva &copy; ${thisYear}</small>`;
 footer.appendChild(copyright);
 document.body.appendChild(footer);
 
-
+/*insert the list of the skills*/
 let skills = ["JavaScript", "CSS", "HTML", "Photoshop","Microsoft Office","Root cause analisis","Asset","Problem Solving"];
 let skillsSection = document.getElementById("skills");
 let skillsList = document.createElement("ul");
@@ -57,13 +59,12 @@ console.info(newMessage)
 });
 
 /*Project section*/
-// Getting DOM elements
+// fetchin projects from github
 const projectsSection = document.querySelector("#projects");
 const projectsList = projectsSection.querySelector("ul");
 
-/*https://api.github.com/users/Dayiley/repos*/
 
-fetch("https://api.github.com/users/Dayiley/repos")
+  fetch("https://api.github.com/users/Dayiley/repos")
   .then((res) => {
     if (!res.ok) {
       throw new Error("Something went wrong 😢");
@@ -73,8 +74,13 @@ fetch("https://api.github.com/users/Dayiley/repos")
   .then((data) => {
     for (let i = 0; i < data.length; i++) {
       const project = document.createElement("li");
-      project.innerText = data[i].name;
-      projectsList.appendChild(project);
+      const projectLink = document.createElement("a");
+      projectLink.innerText = data[i].name;
+      projectLink.href = data[i].html_url;
+      projectLink.target = "_blank";
+      projectLink.rel = "noopener noreferrer";
+      project.appendChild(projectLink); 
+      projectsList.appendChild(project); 
     }
   })
   .catch((error) => {
