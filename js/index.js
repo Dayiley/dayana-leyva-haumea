@@ -63,7 +63,7 @@ const projectsList = projectsSection.querySelector("ul");
 
 /*https://api.github.com/users/Dayiley/repos*/
 
-fetch("https://api.github.com/users/Dayiley/repos")
+/*fetch("https://api.github.com/users/Dayiley/repos")
   .then((res) => {
     if (!res.ok) {
       throw new Error("Something went wrong 😢");
@@ -75,6 +75,31 @@ fetch("https://api.github.com/users/Dayiley/repos")
       const project = document.createElement("li");
       project.innerText = data[i].name;
       projectsList.appendChild(project);
+    }
+  })
+  .catch((error) => {
+    const errorElement = document.createElement("p");
+    errorElement.innerText = error.message;
+    projectsSection.appendChild(errorElement);
+  });*/
+
+  fetch("https://api.github.com/users/Dayiley/repos")
+  .then((res) => {
+    if (!res.ok) {
+      throw new Error("Something went wrong 😢");
+    }
+    return res.json();
+  })
+  .then((data) => {
+    for (let i = 0; i < data.length; i++) {
+      const project = document.createElement("li");
+      const projectLink = document.createElement("a"); // Crea un elemento <a>
+      projectLink.innerText = data[i].name;
+      projectLink.href = data[i].html_url; // Establece la URL del proyecto en GitHub
+      projectLink.target = "_blank"; // Abre el enlace en una nueva pestaña
+      projectLink.rel = "noopener noreferrer"; // Añade rel="noopener noreferrer" por seguridad
+      project.appendChild(projectLink); // Agrega el enlace al elemento <li>
+      projectsList.appendChild(project); // Agrega el elemento <li> al <ul>
     }
   })
   .catch((error) => {

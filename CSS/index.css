@@ -15,6 +15,14 @@
   section:not(:last-child) {
     margin-bottom: 0; 
 */
+section:not(#about-me) {
+    max-width: 800px;
+
+  }
+  section:not(#right-section) {
+    margin: auto;
+    scroll-margin-top: 50px;
+  }
 
 header{
     text-align:right;
@@ -25,43 +33,19 @@ header{
     margin-bottom: 0px;
     padding-bottom: 10px;
 }
-#header-container {
-   text-align: right;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* Setting a max width ensures things don't get too stretched out on larger screens */
-    max-width: 80rem;
-    margin: auto;
-  }
-  #nav-links {
-    display: flex;
-    gap: 1rem;
-    font-size: 1.3rem;
-  }
-  #menu-icon {
-    display: none;
-    width: 48px;
-    /* You can change the color of an image using filters */
-    filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(30deg) brightness(119%) contrast(119%);
-    align-items: right;
-  }
-  ul {
-    list-style-type: none;
-  }
-    nav a{
+
+nav a{
     text-decoration: none;
-    color:rgb(255, 255, 255);
+    color:rgb(24, 1, 28);
 
        
 }
 nav a:hover{
-    color: rgb(226, 180, 115);
+    color: rgb(226, 82, 251);
 
 }
 nav a:focus{
-    color:#1792d2;
+    color:#ffffff;
 }
 
 #about-me {
@@ -69,24 +53,26 @@ nav a:focus{
     display: flex;
     justify-content: space-between;
     padding-bottom: 0;
-    h2{
-        color:rgb(109, 109, 109);
-        text-align: center;
-    }
-    p{
-        color:rgb(191, 190, 191);
-        text-align: center;
-    }
 }
+#about-me h2 {
+  color:rgb(109, 109, 109);
+        text-align: center;
+        margin-bottom: 0;
+        padding-bottom: 0;   
+}
+#about-me p {
+    color:rgb(191, 190, 191);
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .about-me-container {
     flex-wrap:wrap;
     display: flex; 
     align-items:stretch; 
+     width: 100%; 
 }
-.outer {
-    width: 100%; 
-}
-
 .left-section {
     flex: 1;
     display: flex;
@@ -99,13 +85,15 @@ nav a:focus{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    max-width: 300px;
+    margin:auto;
 }
 
 .right-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: -4.7px;
+    margin: 0 auto -4.8px auto;
 }
 
 
@@ -113,18 +101,16 @@ nav a:focus{
     flex-direction: column; /* Utiliza flexbox para los elementos internos */
     align-items: center; /* Centra los elementos verticalmente */
     justify-content: flex-start; /* Coloca los elementos al inicio del contenedor */
+ 
 }
 
 
 .profile-picture-container  {
     width: 100%; 
     height: auto; 
-    max-width: none; /* Desactivamos la restricción del ancho máximo */
-    max-height: none; /* Desactivamos la restricción de la altura máxima */
-    /*display: inline-block;*/
-    margin-left: 3rem;
+    max-width: none; 
+    max-height: none; 
     margin-right: 2rem;
-    margin-bottom: 0;
 }
 #name {
     font-family:"Monoton", sans-serif;
@@ -132,7 +118,6 @@ nav a:focus{
     font-size: 2rem;
     color: rgb(251, 250, 251);
     text-shadow: 3px 3px 3px black;
-
 }
 h2{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -141,6 +126,9 @@ h2{
     font-size: 2rem;
     align-items: center;
     text-align: center;
+}
+ul{
+    list-style: none;
 }
 body{
     margin: 0;
@@ -159,6 +147,7 @@ body{
 }
 .one-experience{
     display: flex;
+    font-size: 1.2rem;
     flex-direction: column;
     color:rgb(122, 41, 149) ;
     margin-bottom: 0;
@@ -178,43 +167,79 @@ body{
     margin-right: 40px;
     color:black;
 }
-/*.container{
-    display: flex;
+
+
+.s-p-outer {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin:auto
+}
+.skill-list,
+.projects-list {
+    flex: 1; /* Cada sección interna ocupará la mitad del ancho disponible */
+    margin: 0 60px; /* Espacio entre las secciones */
+}
+#skills li {
     justify-content: center;
-    padding: 0.5rem;
-    margin:auto;
-    box-sizing: border-box;
+    align-items: center;
+    color:blue;
 }
-#connect {
-    text-align: center;  
-}
-
-.connect-icons{
-    width: 30px;
-    height: 30px;
+#projects ul {
+    margin-top: 2rem;
     display: flex;
-    justify-content:center;
-    gap: 0px;
-    align-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  #projects li {
+  padding: 0.5rem;
+ /* border: 1px solid rgb(176, 171, 178);*/
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 20rem;
+  word-wrap: break-word;
+  cursor: pointer;
+  transition: all 0.2s;
+    
+  }
+  
+  #projects li:hover {
+    background-color:rgb(255, 255, 255);
+    max-width: 21rem;
+    box-shadow: 0px 10px 23px 0px rgba(0, 0, 0, 0.1);
+  }
+  #projects a {
+  text-decoration: none;
+  color:rgb(109, 109, 109);
+ 
+  text-transform: capitalize;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
 }
-.icon-images img{
-    max-width: 100%;
-}*/
-
+  .error {
+    color: var(--error-color);
+  }
 #messageSec {
-  margin: auto;
-  max-width: 28rem;
+
+ /* max-width: 28rem;*/
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
 }
 
+a {       
+    scroll-margin-top: 70px;
+ }
 #messageSec form {   
-        width: 100%;
+        width: 80%;
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+
 }
 
 #messageSec label {
@@ -273,22 +298,7 @@ body{
 .connect-icons a {
     margin: 5px; /* Espacio entre los iconos */
 }
-
-@media (max-width: 700px) {
-  #nav-links {
-    display: none;
-  }
-
-  #menu-icon {
-    display: inline;
-  }
-
-  #menu-icon svg {
-    color: rgb(212, 160, 83);
-    fill: green;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px){
+@media only screen and (min-width: 600px) and (max-width: 1024px){
     .grid-container{
         grid-template-columns: 1fr 1fr;
     }
@@ -296,8 +306,9 @@ body{
     .grid-items{
     
     }
-
-
+    .right-section {
+        margin-bottom: -28px;
+    }
 }
 @media only screen and (min-width:1025px){
     .grid-container{
@@ -309,5 +320,8 @@ body{
     }
     .grid-items{
  
+    }
+    .right-section {
+        margin-bottom: -23px;
     }
 }
