@@ -1,29 +1,33 @@
-
-
-
-
-/* {
-    box-sizing: border-box;
-    padding: 0;
+/*=========  GENERAL  ==================*/
+body{
     margin: 0;
-  }
-  section {
-   
-    padding: 1rem 2rem;
-    margin: 0;
-  }
-  section:not(:last-child) {
-    margin-bottom: 0; 
-*/
+}
 section:not(#about-me) {
     max-width: 800px;
+}
+section:not(#right-section) {
+margin: auto;
+scroll-margin-top: 50px;
+}
+ul{
+list-style: none;
+}
+h2{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(122, 41, 149);
+    font-weight: bolder;
+    font-size: 2rem;
+    align-items: center;
+    text-align: center;
+} 
+.error {
+    color: red;
+}
+a {       
+    scroll-margin-top: 70px;
+}
 
-  }
-  section:not(#right-section) {
-    margin: auto;
-    scroll-margin-top: 50px;
-  }
-
+/*=========  NAV ==================*/
 header{
     text-align:right;
     position: sticky;
@@ -33,21 +37,17 @@ header{
     margin-bottom: 0px;
     padding-bottom: 10px;
 }
-
 nav a{
     text-decoration: none;
     color:rgb(24, 1, 28);
-
-       
 }
 nav a:hover{
     color: rgb(226, 82, 251);
-
 }
 nav a:focus{
     color:#ffffff;
 }
-
+/*=========  ABOUT ME ==================*/
 #about-me {
     background-color:rgb(83, 4, 109);
     display: flex;
@@ -66,7 +66,6 @@ nav a:focus{
     font-size: 1.5rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
 .about-me-container {
     flex-wrap:wrap;
     display: flex; 
@@ -78,7 +77,6 @@ nav a:focus{
     display: flex;
     flex-direction: column;
 }
-
 .top-left, .bottom-left {
     flex: 1;
     display: flex;
@@ -88,30 +86,6 @@ nav a:focus{
     max-width: 300px;
     margin:auto;
 }
-
-.right-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto -4.8px auto;
-}
-
-
-.about-content {
-    flex-direction: column; /* Utiliza flexbox para los elementos internos */
-    align-items: center; /* Centra los elementos verticalmente */
-    justify-content: flex-start; /* Coloca los elementos al inicio del contenedor */
- 
-}
-
-
-.profile-picture-container  {
-    width: 100%; 
-    height: auto; 
-    max-width: none; 
-    max-height: none; 
-    margin-right: 2rem;
-}
 #name {
     font-family:"Monoton", sans-serif;
     font-weight: 305;
@@ -119,21 +93,24 @@ nav a:focus{
     color: rgb(251, 250, 251);
     text-shadow: 3px 3px 3px black;
 }
-h2{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(122, 41, 149);
-    font-weight: bolder;
-    font-size: 2rem;
+.about-content {
+    flex-direction: column; 
     align-items: center;
-    text-align: center;
 }
-ul{
-    list-style: none;
+.right-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto -4.8px auto;
 }
-body{
-    margin: 0;
+.profile-picture-container  {
+    width: 100%; 
+    height: auto; 
+    max-width: none; 
+    max-height: none; 
+    margin-right: 2rem;
 }
-
+/*=========  EXPERIENCE ==================*/
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(250px,1fr));/*mobile first*/
@@ -142,8 +119,7 @@ body{
 }
 .grid-items {
     display: flex;
-    flex-direction: row;
-   
+    flex-direction: row;  
 }
 .one-experience{
     display: flex;
@@ -167,8 +143,7 @@ body{
     margin-right: 40px;
     color:black;
 }
-
-
+/*=========  SKILLS AND PROJECTS ==================*/
 .s-p-outer {
     display:flex;
     justify-content: space-between;
@@ -178,13 +153,23 @@ body{
 }
 .skill-list,
 .projects-list {
-    flex: 1; /* Cada sección interna ocupará la mitad del ancho disponible */
-    margin: 0 60px; /* Espacio entre las secciones */
+    flex: 1;
+    margin: 0 60px;
 }
 #skills li {
+    display: flex;
     justify-content: center;
     align-items: center;
-    color:blue;
+    color:rgb(109, 109, 109);
+    text-align: center;
+    font-weight: bolder;
+} 
+#skills ul {
+    text-align: center;
+    padding: 0;
+    font-size: larger;
+    background-color: rgb(243, 233, 253);
+    border-radius: 4rem;
 }
 #projects ul {
     margin-top: 2rem;
@@ -192,20 +177,18 @@ body{
     flex-direction: column;
     gap: 0.5rem;
     align-items: center;
+    padding: 0;
+    font-size: larger;
   }
-  
   #projects li {
   padding: 0.5rem;
- /* border: 1px solid rgb(176, 171, 178);*/
   border-radius: 0.5rem;
   width: 100%;
   max-width: 20rem;
   word-wrap: break-word;
   cursor: pointer;
-  transition: all 0.2s;
-    
-  }
-  
+  transition: all 0.2s;   
+  } 
   #projects li:hover {
     background-color:rgb(255, 255, 255);
     max-width: 21rem;
@@ -214,50 +197,36 @@ body{
   #projects a {
   text-decoration: none;
   color:rgb(109, 109, 109);
- 
   text-transform: capitalize;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
 }
-  .error {
-    color: var(--error-color);
-  }
+/*=========  MESSAGES ==================*/ 
 #messageSec {
-
- /* max-width: 28rem;*/
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
 }
-
-a {       
-    scroll-margin-top: 70px;
- }
 #messageSec form {   
-        width: 80%;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 #messageSec label {
     font-size: 0.9rem;
     color: rgb(89, 89, 89);
     margin-bottom: -0.5rem;
-
-  }
-  
-  #messageSec input,
-  textarea {
+}
+#messageSec input,textarea {
     padding: 0.5rem;
     border: 1px solid rgb(122, 41, 149);
     border-radius: 0.5rem;
     font-family: "Courier New", Courier, monospace;
-  }
-  
-  #messageSec button {
+}  
+#messageSec button {
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 0.5rem;
@@ -265,13 +234,12 @@ a {
     color: white;
     font-weight: bold;
     cursor: pointer;
-  }
-  
-  #messageSec button:hover {
+}  
+#messageSec button:hover {
     background-color: rgb(226, 180, 115);
-  }
-  
-  footer {
+}
+  /*=========  FOOTER==================*/
+footer {
     background-color: rgb(83, 4, 109);
     padding: 20px;
     text-align: center;
@@ -281,47 +249,58 @@ a {
 }
 .container {
     display: flex;
-    justify-content: center; /* Centra horizontalmente los elementos dentro del contenedor */
-    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
-    flex-direction: column; /* Coloca los elementos en columna */
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column; 
     margin-bottom: -40px;
     margin-top: -20px;
 }
-
 .connect-icons {
     display: flex;
-    flex-direction: row; /* Los iconos se colocarán en una fila */
-    align-items: center; /* Alinea los iconos verticalmente al centro */
-    justify-content: center; /* Centra los iconos horizontalmente */
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: center; 
+}
+.connect-icons a {
+    margin: 5px;
 }
 
-.connect-icons a {
-    margin: 5px; /* Espacio entre los iconos */
-}
+
+/*=========  BIGGER SCREENS ==================*/
 @media only screen and (min-width: 600px) and (max-width: 1024px){
     .grid-container{
         grid-template-columns: 1fr 1fr;
     }
   
-    .grid-items{
-    
-    }
     .right-section {
-        margin-bottom: -28px;
+        margin-bottom: -76px;
     }
+    #name{
+        margin-left: 40px;
+    }
+    #about-me p {
+        font-family:cursive ;
+        color: rgb(213, 213, 213);
+    }
+    .bottom-left {
+        max-width: 400px;
+    }
+
 }
+
 @media only screen and (min-width:1025px){
+    p{
+        font-size: larger;
+    }
+    h2{
+        font-size: 3rem;
+    }
+    
     .grid-container{
         grid-template-columns: 1fr 1fr;
     }
-    h2{
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        
+    .bottom-left {
+        max-width: 500px;
     }
-    .grid-items{
- 
-    }
-    .right-section {
-        margin-bottom: -23px;
-    }
+
 }
